@@ -40,8 +40,21 @@ body.dark {
 }
 .section {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+}
+.skills {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.skills div {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  flex: 1 1 120px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 .project {
   background: white;
@@ -50,19 +63,17 @@ body.dark {
   padding: 1rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-.testimonial {
-  background: #eee;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  border-left: 4px solid #00bcd4;
-  border-radius: 4px;
-}
 footer {
   background: #222;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+}
+footer .socials a {
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
 }
 .btn {
   background: #00bcd4;
