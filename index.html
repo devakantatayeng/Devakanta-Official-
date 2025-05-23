@@ -4,23 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devakanta Official</title>
-  <meta name="description" content="Official personal profile of Devakanta Tayeng - Developer and Creator.">
+  <meta name="description" content="Official advanced personal profile of Devakanta Tayeng - Developer and Creator.">
   <meta property="og:title" content="Devakanta Official" />
   <meta property="og:description" content="Portfolio and profile of Devakanta Tayeng" />
   <meta property="og:image" content="preview.jpg" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" />
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div id="loader"></div>
   <nav class="navbar">
     <div class="logo">Devakanta</div>
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><button id="toggle">Dark Mode</button></li>
     </ul>
@@ -28,7 +30,7 @@
 
   <header id="home" class="hero" data-aos="fade-in">
     <h1>Hi, I'm <span class="typed-text"></span></h1>
-    <p>A Web Developer & Designer</p>
+    <p>A Full-Stack Web Developer</p>
     <a class="btn" href="resume.pdf" download>Download Resume</a>
   </header>
 
@@ -38,15 +40,37 @@
       <div><i class="fab fa-html5"></i> HTML</div>
       <div><i class="fab fa-css3-alt"></i> CSS</div>
       <div><i class="fab fa-js"></i> JavaScript</div>
+      <div><i class="fab fa-react"></i> React</div>
+      <div><i class="fab fa-node"></i> Node.js</div>
       <div><i class="fab fa-python"></i> Python</div>
     </div>
   </section>
 
   <section id="projects" class="section" data-aos="fade-up">
     <h2>Portfolio</h2>
-    <div class="project">Web App Project</div>
-    <div class="project">Design Project</div>
-    <div class="project">Open Source Contribution</div>
+    <div class="portfolio-grid">
+      <div class="project-card">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio using HTML, CSS, JS.</p>
+      </div>
+      <div class="project-card">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>React App</h3>
+        <p>Dynamic app with React and Firebase.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="section" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">"Amazing work!" – Client A</div>
+        <div class="swiper-slide">"Very professional." – Client B</div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
   </section>
 
   <section id="contact" class="section" data-aos="fade-up">
@@ -66,13 +90,17 @@
       <a href="#"><i class="fab fa-linkedin"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
+    <a href="#home" class="scroll-top">↑</a>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
+    window.onload = () => { document.getElementById("loader").style.display = "none"; };
     AOS.init();
     new Typed('.typed-text', {
-      strings: ['Devakanta Tayeng', 'a Web Developer', 'a Designer'],
+      strings: ['Devakanta Tayeng', 'a Developer', 'a Designer'],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true
@@ -86,6 +114,10 @@
       body.classList.toggle("dark");
       localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
     };
+    new Swiper('.swiper-container', {
+      loop: true,
+      pagination: { el: '.swiper-pagination' }
+    });
   </script>
 </body>
 </html>
