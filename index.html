@@ -5,117 +5,72 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devakanta Official</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
   <nav class="navbar">
-    <h1>Devakanta</h1>
+    <div>Devakanta Official</div>
     <ul>
-      <li><a href="#about">About</a></li>
+      <li><a href="#home">Home</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><button id="toggle">Toggle Theme</button></li>
+      <li><button id="toggle">Dark Mode</button></li>
     </ul>
   </nav>
-  <header class="hero" style="animation: fadeIn 1s ease-in-out;">
-    <h1>Hello, I'm <span id="typed"></span></h1>
-    <p>Web Developer & Designer</p>
-    <a href="#" class="btn">Download Resume</a>
+
+  <header id="home" class="hero" data-aos="fade-in">
+    <h1>Hello, I'm <span class="typed-text"></span></h1>
+    <p>Web Developer | Designer | Creator</p>
+    <a class="btn" href="resume.pdf" download>Download Resume</a>
   </header>
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I create beautiful and functional websites with HTML, CSS, and JavaScript.</p>
+
+  <section id="projects" class="section" data-aos="fade-up">
+    <h2>My Projects</h2>
+    <div class="project">Project One</div>
+    <div class="project">Project Two</div>
+    <div class="project">Project Three</div>
   </section>
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="filter-buttons">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="web">Web</button>
-      <button data-filter="app">App</button>
-      <button data-filter="uiux">UI/UX</button>
-    </div>
-    <div class="project-list">
-      <div class="project" data-category="web">
-        <h3>Portfolio Website</h3>
-        <p>A responsive portfolio website with animations.</p>
-      </div>
-      <div class="project" data-category="app">
-        <h3>Mobile App</h3>
-        <p>Todo list app with React Native.</p>
-      </div>
-      <div class="project" data-category="uiux">
-        <h3>Design Project</h3>
-        <p>UI/UX design for e-commerce platform.</p>
-      </div>
-    </div>
-  </section>
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <div class="skill">HTML <div class="bar"><div class="progress" style="width: 95%;"></div></div></div>
-    <div class="skill">CSS <div class="bar"><div class="progress" style="width: 90%;"></div></div></div>
-    <div class="skill">JavaScript <div class="bar"><div class="progress" style="width: 80%;"></div></div></div>
-  </section>
-  <section id="testimonials" class="section">
+
+  <section id="testimonials" class="section" data-aos="fade-up">
     <h2>Testimonials</h2>
-    <div class="testimonial active">
-      <p>"Devakanta is a fantastic developer! Highly recommended."</p>
-      <h4>- Client A</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Great to work with and delivered on time."</p>
-      <h4>- Client B</h4>
-    </div>
-    <div class="testimonial">
-      <p>"Creative and professional service."</p>
-      <h4>- Client C</h4>
-    </div>
-    <button id="prevTestimonial">&lt;</button>
-    <button id="nextTestimonial">&gt;</button>
+    <div class="testimonial">"Great work!" - Client A</div>
+    <div class="testimonial">"Highly professional." - Client B</div>
   </section>
-  <section id="contact" class="section">
+
+  <section id="contact" class="section" data-aos="fade-up">
     <h2>Contact Me</h2>
-    <form action="https://formsubmit.co/devakanta@example.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <form action="https://formsubmit.co/youremail@example.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required /><br />
+      <input type="email" name="email" placeholder="Your Email" required /><br />
+      <textarea name="message" placeholder="Your Message" required></textarea><br />
+      <button type="submit" class="btn">Send</button>
     </form>
-    <div class="social">
-      <a href="#"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
   </section>
-  <button id="backToTop" title="Back to top">&#8679;</button>
+
   <footer>
-    <p>&copy; 2025 Devakanta Official. All rights reserved.</p>
+    <p>© 2025 Devakanta. All rights reserved.</p>
   </footer>
 
-<script>
-  const toggle = document.getElementById("toggle");
-  const body = document.body;
-  // Load theme preference
-  if (localStorage.getItem("theme") === "dark") {
-    body.classList.add("dark");
-  }
-  toggle.onclick = () => {
-    body.classList.toggle("dark");
-    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
-  };
-</script>
-
-<style>
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-</style>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    AOS.init();
+    new Typed('.typed-text', {
+      strings: ['Devakanta Tayeng', 'a Developer', 'a Creator'],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
+    const toggle = document.getElementById("toggle");
+    const body = document.body;
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark");
+    }
+    toggle.onclick = () => {
+      body.classList.toggle("dark");
+      localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+    };
+  </script>
 </body>
-
-
 </html>
