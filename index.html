@@ -22,7 +22,7 @@
       <li><button id="toggle">Toggle Theme</button></li>
     </ul>
   </nav>
-  <header class="hero">
+  <header class="hero" style="animation: fadeIn 1s ease-in-out;">
     <h1>Hello, I'm <span id="typed"></span></h1>
     <p>Web Developer & Designer</p>
     <a href="#" class="btn">Download Resume</a>
@@ -108,6 +108,14 @@
     localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
   };
 </script>
+
+<style>
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </body>
+
 
 </html>
