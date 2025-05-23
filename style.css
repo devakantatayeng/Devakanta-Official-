@@ -1,99 +1,102 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f9f9f9;
+  background: #f4f4f4;
   color: #333;
+  transition: background 0.3s, color 0.3s;
 }
-
-.hero {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+body.dark {
+  background: #121212;
+  color: #eee;
 }
-
-.hero .btn {
-  background: white;
-  color: #333;
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #fff;
   padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.navbar a {
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  margin-top: 15px;
-  display: inline-block;
-}
-
-section {
-  padding: 30px 20px;
-  margin: 15px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-h2 {
   color: #333;
+}
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+.hero .btn {
+  padding: 10px 20px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+}
+.section {
+  padding: 40px 20px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+.project, .skill {
   margin-bottom: 15px;
 }
-
-.project {
-  margin-bottom: 20px;
+.bar {
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
-.project a {
-  color: #667eea;
-  text-decoration: none;
+.progress {
+  background: #667eea;
+  height: 100%;
 }
-
 form {
   display: flex;
   flex-direction: column;
 }
-
-form input,
-form textarea {
-  padding: 10px;
+form input, form textarea {
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  padding: 10px;
   border-radius: 6px;
-  font-family: inherit;
+  border: 1px solid #ccc;
 }
-
 form button {
   padding: 10px;
-  border: none;
   background: #667eea;
   color: white;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
 }
-
-form button:hover {
-  background: #5a67d8;
-}
-
 .social {
   margin-top: 15px;
-  text-align: center;
 }
-
 .social a {
   margin: 0 10px;
   font-size: 1.5rem;
-  color: #444;
-  text-decoration: none;
-  transition: transform 0.2s ease;
+  color: #333;
 }
-
-.social a:hover {
-  transform: scale(1.2);
-  color: #000;
-}
-
 footer {
   text-align: center;
   padding: 20px;
   background: #222;
   color: white;
+}
+body.dark .navbar, body.dark .section, body.dark .hero, body.dark footer {
+  background: #1e1e1e;
+}
+body.dark .navbar a, body.dark .social a {
+  color: #eee;
 }
