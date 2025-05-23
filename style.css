@@ -1,92 +1,83 @@
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
   color: #333;
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 body.dark {
   background: #121212;
   color: #eee;
 }
 .navbar {
+  background: #222;
+  color: white;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem 2rem;
-  background: #333;
-  color: #fff;
+  align-items: center;
 }
 .navbar ul {
-  list-style: none;
   display: flex;
+  list-style: none;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
 }
-.navbar a {
+.navbar a, .navbar button {
   color: white;
   text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
 }
 .hero {
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  background: linear-gradient(90deg, #00bcd4, #4dd0e1);
+  color: white;
 }
 .section {
   padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
-.skill {
-  margin: 1rem 0;
-}
-.bar {
-  background: #ccc;
-  height: 10px;
-}
-.progress {
-  height: 10px;
-  background: #00bcd4;
-}
-button {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-}
-@media screen and (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
 .project {
-  background: #fff;
+  background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  padding: 1rem;
   margin: 1rem 0;
-  transition: transform 0.3s;
-}
-.project:hover {
-  transform: translateY(-5px);
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .testimonial {
   background: #eee;
   padding: 1rem;
-  border-left: 4px solid #00bcd4;
   margin-bottom: 1rem;
+  border-left: 4px solid #00bcd4;
+  border-radius: 4px;
 }
 footer {
-  background: #333;
-  color: #fff;
+  background: #222;
+  color: white;
   text-align: center;
   padding: 1rem;
+  margin-top: 2rem;
 }
 .btn {
   background: #00bcd4;
   color: white;
-  padding: 0.75rem 1.5rem;
   border: none;
-  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
   border-radius: 5px;
 }
-.btn:hover {
-  background: #0097a7;
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
 }
