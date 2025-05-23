@@ -5,36 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Devakanta Official</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <nav class="navbar">
+    <h1>Devakanta</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="toggle">Toggle Theme</button></li>
+    </ul>
+  </nav>
+
   <header class="hero">
-    <h1>Hi, I'm Devakanta</h1>
-    <p>Web Developer | Content Creator</p>
+    <h1>Hello, I'm Devakanta</h1>
+    <p>Web Developer & Designer</p>
     <a href="#" class="btn">Download Resume</a>
   </header>
 
-  <section class="about">
+  <section id="about" class="section">
     <h2>About Me</h2>
-    <p>I'm a passionate web developer building personal and professional projects. Welcome to my official profile website.</p>
+    <p>I create beautiful and functional websites with HTML, CSS, and JavaScript.</p>
   </section>
 
-  <section class="projects">
+  <section id="projects" class="section">
     <h2>Projects</h2>
     <div class="project">
-      <h3>My Portfolio Website</h3>
-      <p>A modern responsive portfolio website built using HTML, CSS and JS.</p>
-      <a href="#">View Project</a>
+      <h3>Project One</h3>
+      <p>Responsive website for a portfolio with animations.</p>
     </div>
     <div class="project">
-      <h3>Blog Design</h3>
-      <p>A simple and elegant blog layout with responsive design.</p>
-      <a href="#">Read Blog</a>
+      <h3>Project Two</h3>
+      <p>Interactive blog layout with comment form and styling.</p>
     </div>
   </section>
 
-  <section class="contact">
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skill">HTML <div class="bar"><div class="progress" style="width: 95%;"></div></div></div>
+    <div class="skill">CSS <div class="bar"><div class="progress" style="width: 90%;"></div></div></div>
+    <div class="skill">JavaScript <div class="bar"><div class="progress" style="width: 80%;"></div></div></div>
+  </section>
+
+  <section id="contact" class="section">
     <h2>Contact Me</h2>
     <form action="https://formsubmit.co/devakanta@example.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required />
@@ -45,12 +62,19 @@
     <div class="social">
       <a href="#"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-linkedin"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Devakanta Official. All rights reserved.</p>
   </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('toggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
