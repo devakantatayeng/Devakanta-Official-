@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devakanta Official</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -16,41 +17,66 @@
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><button id="toggle">Toggle Theme</button></li>
     </ul>
   </nav>
-
   <header class="hero">
-    <h1>Hello, I'm Devakanta</h1>
+    <h1>Hello, I'm <span id="typed"></span></h1>
     <p>Web Developer & Designer</p>
     <a href="#" class="btn">Download Resume</a>
   </header>
-
   <section id="about" class="section">
     <h2>About Me</h2>
     <p>I create beautiful and functional websites with HTML, CSS, and JavaScript.</p>
   </section>
-
   <section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="project">
-      <h3>Project One</h3>
-      <p>Responsive website for a portfolio with animations.</p>
+    <div class="filter-buttons">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="app">App</button>
+      <button data-filter="uiux">UI/UX</button>
     </div>
-    <div class="project">
-      <h3>Project Two</h3>
-      <p>Interactive blog layout with comment form and styling.</p>
+    <div class="project-list">
+      <div class="project" data-category="web">
+        <h3>Portfolio Website</h3>
+        <p>A responsive portfolio website with animations.</p>
+      </div>
+      <div class="project" data-category="app">
+        <h3>Mobile App</h3>
+        <p>Todo list app with React Native.</p>
+      </div>
+      <div class="project" data-category="uiux">
+        <h3>Design Project</h3>
+        <p>UI/UX design for e-commerce platform.</p>
+      </div>
     </div>
   </section>
-
   <section id="skills" class="section">
     <h2>Skills</h2>
     <div class="skill">HTML <div class="bar"><div class="progress" style="width: 95%;"></div></div></div>
     <div class="skill">CSS <div class="bar"><div class="progress" style="width: 90%;"></div></div></div>
     <div class="skill">JavaScript <div class="bar"><div class="progress" style="width: 80%;"></div></div></div>
   </section>
-
+  <section id="testimonials" class="section">
+    <h2>Testimonials</h2>
+    <div class="testimonial active">
+      <p>"Devakanta is a fantastic developer! Highly recommended."</p>
+      <h4>- Client A</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Great to work with and delivered on time."</p>
+      <h4>- Client B</h4>
+    </div>
+    <div class="testimonial">
+      <p>"Creative and professional service."</p>
+      <h4>- Client C</h4>
+    </div>
+    <button id="prevTestimonial">&lt;</button>
+    <button id="nextTestimonial">&gt;</button>
+  </section>
   <section id="contact" class="section">
     <h2>Contact Me</h2>
     <form action="https://formsubmit.co/devakanta@example.com" method="POST">
@@ -65,16 +91,9 @@
       <a href="#"><i class="fab fa-twitter"></i></a>
     </div>
   </section>
-
+  <button id="backToTop" title="Back to top">&#8679;</button>
   <footer>
     <p>&copy; 2025 Devakanta Official. All rights reserved.</p>
   </footer>
-
-  <script>
-    const toggleBtn = document.getElementById('toggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-    });
-  </script>
 </body>
 </html>
