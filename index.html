@@ -4,39 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devakanta Official</title>
+  <meta name="description" content="Official personal profile of Devakanta Tayeng - Developer and Creator.">
+  <meta property="og:title" content="Devakanta Official" />
+  <meta property="og:description" content="Portfolio and profile of Devakanta Tayeng" />
+  <meta property="og:image" content="preview.jpg" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav class="navbar">
-    <div>Devakanta Official</div>
+    <div class="logo">Devakanta</div>
     <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><button id="toggle">Dark Mode</button></li>
     </ul>
   </nav>
 
   <header id="home" class="hero" data-aos="fade-in">
-    <h1>Hello, I'm <span class="typed-text"></span></h1>
-    <p>Web Developer | Designer | Creator</p>
+    <h1>Hi, I'm <span class="typed-text"></span></h1>
+    <p>A Web Developer & Designer</p>
     <a class="btn" href="resume.pdf" download>Download Resume</a>
   </header>
 
-  <section id="projects" class="section" data-aos="fade-up">
-    <h2>My Projects</h2>
-    <div class="project">Project One</div>
-    <div class="project">Project Two</div>
-    <div class="project">Project Three</div>
+  <section id="skills" class="section" data-aos="fade-up">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <div><i class="fab fa-html5"></i> HTML</div>
+      <div><i class="fab fa-css3-alt"></i> CSS</div>
+      <div><i class="fab fa-js"></i> JavaScript</div>
+      <div><i class="fab fa-python"></i> Python</div>
+    </div>
   </section>
 
-  <section id="testimonials" class="section" data-aos="fade-up">
-    <h2>Testimonials</h2>
-    <div class="testimonial">"Great work!" - Client A</div>
-    <div class="testimonial">"Highly professional." - Client B</div>
+  <section id="projects" class="section" data-aos="fade-up">
+    <h2>Portfolio</h2>
+    <div class="project">Web App Project</div>
+    <div class="project">Design Project</div>
+    <div class="project">Open Source Contribution</div>
   </section>
 
   <section id="contact" class="section" data-aos="fade-up">
@@ -50,14 +60,19 @@
   </section>
 
   <footer>
-    <p>© 2025 Devakanta. All rights reserved.</p>
+    <div>© 2025 Devakanta. All rights reserved.</div>
+    <div class="socials">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     AOS.init();
     new Typed('.typed-text', {
-      strings: ['Devakanta Tayeng', 'a Developer', 'a Creator'],
+      strings: ['Devakanta Tayeng', 'a Web Developer', 'a Designer'],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true
