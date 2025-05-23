@@ -95,5 +95,19 @@
   <footer>
     <p>&copy; 2025 Devakanta Official. All rights reserved.</p>
   </footer>
+
+<script>
+  const toggle = document.getElementById("toggle");
+  const body = document.body;
+  // Load theme preference
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark");
+  }
+  toggle.onclick = () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  };
+</script>
 </body>
+
 </html>
