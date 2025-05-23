@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Devakanta Official</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <h1>Devakanta Official</h1>
-    <p>Welcome to my personal profile</p>
+  <header class="hero">
+    <h1>Hi, I'm Devakanta</h1>
+    <p>Web Developer | Content Creator</p>
+    <a href="#" class="btn">Download Resume</a>
   </header>
 
   <section class="about">
     <h2>About Me</h2>
-    <p>Hello! I'm Devakanta, a passionate individual working on personal and professional growth. This is my official personal profile website.</p>
+    <p>I'm a passionate web developer building personal and professional projects. Welcome to my official profile website.</p>
   </section>
 
-  <section class="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Web Development</li>
-      <li>Content Creation</li>
-      <li>Graphic Design</li>
-    </ul>
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>My Portfolio Website</h3>
+      <p>A modern responsive portfolio website built using HTML, CSS and JS.</p>
+      <a href="#">View Project</a>
+    </div>
+    <div class="project">
+      <h3>Blog Design</h3>
+      <p>A simple and elegant blog layout with responsive design.</p>
+      <a href="#">Read Blog</a>
+    </div>
   </section>
 
   <section class="contact">
     <h2>Contact Me</h2>
-    <p><i class="fas fa-envelope"></i> Email: devakanta@example.com</p>
-    <p><i class="fas fa-phone"></i> Phone: +91 12345 67890</p>
+    <form action="https://formsubmit.co/devakanta@example.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
     <div class="social">
       <a href="#"><i class="fab fa-github"></i></a>
       <a href="#"><i class="fab fa-linkedin"></i></a>
