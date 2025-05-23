@@ -1,6 +1,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  padding: 0;
   background: #f4f4f4;
   color: #333;
   transition: background 0.3s, color 0.3s;
@@ -9,4 +10,48 @@ body.dark {
   background: #121212;
   color: #eee;
 }
-/* Shortened for brevity, full CSS will be written in a real case */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #333;
+  color: #fff;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+.hero {
+  text-align: center;
+  padding: 2rem;
+}
+.section {
+  padding: 2rem;
+}
+.skill {
+  margin: 1rem 0;
+}
+.bar {
+  background: #ccc;
+  height: 10px;
+}
+.progress {
+  height: 10px;
+  background: #00bcd4;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
