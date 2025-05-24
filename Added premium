@@ -1,0 +1,41 @@
+import React from "react"; import { Button } from "@/components/ui/button"; import { Card } from "@/components/ui/card";
+
+export default function DevakantaOfficial() { return ( <div className="min-h-screen bg-gradient-to-br from-white to-gray-100 text-gray-900 font-sans"> <header className="flex justify-between items-center p-6 shadow-md bg-white"> <h1 className="text-2xl font-bold">Devakanta Official</h1> <nav className="space-x-6"> <a href="#about" className="hover:text-blue-600">About</a> <a href="#projects" className="hover:text-blue-600">Projects</a> <a href="#contact" className="hover:text-blue-600">Contact</a> </nav> </header>
+
+<main className="px-6 py-16 text-center">
+    <h2 className="text-4xl font-extrabold mb-4">Welcome to Devakanta Official</h2>
+    <p className="text-lg text-gray-600 mb-8">
+      Showcasing innovation, creativity, and professional excellence.
+    </p>
+    <Button className="text-lg px-6 py-3 rounded-full shadow-lg">Get in Touch</Button>
+  </main>
+
+  <section id="about" className="px-6 py-16 bg-white">
+    <h3 className="text-3xl font-semibold mb-4">About Me</h3>
+    <p className="text-gray-700 max-w-2xl mx-auto">
+      I’m Devakanta, a passionate developer and digital strategist dedicated to building clean, functional, and user-centered digital experiences.
+    </p>
+  </section>
+
+  <section id="projects" className="px-6 py-16 bg-gray-50">
+    <h3 className="text-3xl font-semibold mb-8 text-center">Projects</h3>
+    <div className="grid md:grid-cols-3 gap-6">
+      <Card className="p-4">Project One</Card>
+      <Card className="p-4">Project Two</Card>
+      <Card className="p-4">Project Three</Card>
+    </div>
+  </section>
+
+  <section id="contact" className="px-6 py-16 bg-white text-center">
+    <h3 className="text-3xl font-semibold mb-4">Contact</h3>
+    <p className="mb-6">Feel free to reach out via email or social media!</p>
+    <Button className="px-6 py-2">Email Me</Button>
+  </section>
+
+  <footer className="text-center py-6 text-gray-500 text-sm">
+    © 2025 Devakanta Official. All rights reserved.
+  </footer>
+</div>
+
+); }
+
