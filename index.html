@@ -2,49 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Devakanta Official - Advanced</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devakanta Official 2025</title>
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
   <div id="particles-js"></div>
   <header class="header">
-    <select id="lang-select">
-      <option value="en">English</option>
-      <option value="hi">हिन्दी</option>
-    </select>
-    <h1 data-en="Welcome to Devakanta's Site" data-hi="देवकांत की साइट में आपका स्वागत है">Welcome to Devakanta's Site</h1>
+    <div class="container">
+      <h1>Devakanta Tayeng</h1>
+      <p>Web Developer | Designer | Coder</p>
+      <select id="lang-select">
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
+      </select>
+    </div>
   </header>
 
-  <section id="timeline">
-    <h2>Timeline</h2>
-    <ul class="timeline">
-      <li><span>2023</span> Started Web Development</li>
-      <li><span>2024</span> Built First Portfolio</li>
-      <li><span>2025</span> Launched Professional Site</li>
-    </ul>
-  </section>
-
-  <section id="blog">
-    <h2>Blog</h2>
-    <div class="post">
-      <h3>My Journey in Coding</h3>
-      <p>I started learning HTML and CSS in 2023. It was amazing to build my first website.</p>
+  <section class="about">
+    <div class="container">
+      <h2 data-en="About Me" data-hi="मेरे बारे में">About Me</h2>
+      <p>I am a passionate developer building modern, responsive, and creative websites.</p>
     </div>
   </section>
 
+  <section class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <ul>
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript / React</li>
+        <li>Git / GitHub</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="timeline">
+    <div class="container">
+      <h2>My Timeline</h2>
+      <ul>
+        <li><strong>2023</strong> - Learned HTML, CSS</li>
+        <li><strong>2024</strong> - Created first portfolio</li>
+        <li><strong>2025</strong> - Built advanced site with multiple features</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blog">
+    <div class="container">
+      <h2>Latest Blog</h2>
+      <article>
+        <h3>How I Built My 2025 Website</h3>
+        <p>This journey involved using HTML5, CSS animations, particles.js, and multilingual support.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Devakanta Tayeng. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script>
-    // Multilingual support
-    const langSelect = document.getElementById('lang-select');
-    langSelect.addEventListener('change', () => {
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.textContent = el.getAttribute('data-' + langSelect.value);
+    const langSelect = document.getElementById("lang-select");
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      document.querySelectorAll("[data-en]").forEach((el) => {
+        el.textContent = el.getAttribute("data-" + lang);
       });
     });
 
-    // Particles.js init
-    particlesJS.load('particles-js', 'particles.json');
+    particlesJS.load("particles-js", "particles.json");
   </script>
 </body>
 </html>
