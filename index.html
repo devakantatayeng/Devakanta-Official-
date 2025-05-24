@@ -8,102 +8,65 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      background-color: #f4f4f4;
       color: #333;
     }
-
-    header {
-      background-color: #000;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    #hero {
-      background: linear-gradient(to right, #1e90ff, #00bfff);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    section {
-      padding: 40px 20px;
-    }
-
-    footer {
-      background-color: #222;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
-
     .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      background-color: white;
       max-width: 1000px;
-      margin: 0 auto;
+      margin: 40px auto;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
     }
-
-    ul {
-      list-style-type: disc;
-      padding-left: 20px;
+    .profile-pic {
+      max-width: 300px;
+      border-radius: 12px;
+      margin-right: 40px;
+    }
+    .info {
+      max-width: 500px;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .info p {
+      margin: 6px 0;
+      font-size: 16px;
+    }
+    .social-icons a {
+      margin-right: 15px;
+      text-decoration: none;
+      font-size: 24px;
+      color: black;
+    }
+    .social-icons a:hover {
+      color: #0073e6;
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Devakanta Official</h1>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+  <div class="container">
+    <img class="profile-pic" src="profile.jpg" alt="Devakanta Tayeng">
+    <div class="info">
+      <h1>Devakanta Tayeng</h1>
+      <p><strong>Date of Birth:</strong> 06/02/2000</p>
+      <p><strong>Location:</strong> Simen Chapori</p>
+      <p><strong>Short Bio:</strong> Loklung</p>
+      <p><strong>Email:</strong> devakantaofficial@gmail.com</p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/devakanta_insta?igsh=OHZ5NWF0MGcyOHdk" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/18omhTNVhW/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://open.spotify.com/user/31j5elo7sfdis5e7j6odbinncloe?si=Ulgl8QzNT-2_woh90p-Auw" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://youtube.com/@devakantaofficial?si=VtJmD1kdlTAhReHn" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
     </div>
-  </header>
-
-  <section id="hero">
-    <div class="container">
-      <h2>Welcome to Devakanta Official</h2>
-      <p>Inspiration. Learning. Success Stories.</p>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>I am Devakanta Tayeng, a passionate student and storyteller. I share motivational content, educational resources, and Assamese cultural insights through this platform.</p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <h2>My Projects</h2>
-      <ul>
-        <li>Success Stories (সফলতাৰ গল্প)</li>
-        <li>Assamese Education Hub</li>
-        <li>YouTube Channel & Blog</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: devakantaofficial@example.com</p>
-      <p>Follow me on social media for more updates!</p>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Devakanta Official. All rights reserved.</p>
-    </div>
-  </footer>
+  </div>
 </body>
 </html>
